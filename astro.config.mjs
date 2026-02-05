@@ -4,6 +4,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  // The base URL where your site will be hosted
-  site: 'https://www.btcspeakeasy.com',
+  // GitHub Pages deployment settings
+  // When you move to btcspeakeasy.com, change site and remove base
+  site: 'https://elledub-lw.github.io',
+  base: '/btcspeakeasy',
 });
