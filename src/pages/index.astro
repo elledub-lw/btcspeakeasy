@@ -7,6 +7,8 @@
 */
 
 import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Home">
@@ -20,8 +22,8 @@ import Layout from '../layouts/Layout.astro';
         with guidance from industry experts.
       </p>
       <div class="hero-buttons">
-        <a href="/schedule" class="btn btn-primary">View Upcoming Workshops</a>
-        <a href="/program" class="btn btn-outline">Explore the Curriculum</a>
+        <a href={`${base}schedule`} class="btn btn-primary">View Upcoming Workshops</a>
+        <a href={`${base}program`} class="btn btn-outline">Explore the Curriculum</a>
       </div>
     </div>
   </section>
@@ -86,7 +88,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="price">€600-900</span>
             <span class="duration">2 days</span>
           </div>
-          <a href="/program#foundations" class="btn btn-outline">Learn More</a>
+          <a href={`${base}program#foundations`} class="btn btn-outline">Learn More</a>
         </div>
         <div class="workshop-card featured">
           <span class="workshop-level">Advanced</span>
@@ -106,7 +108,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="price">€1,800-2,800</span>
             <span class="duration">2 days</span>
           </div>
-          <a href="/program#advanced" class="btn btn-primary">Learn More</a>
+          <a href={`${base}program#advanced`} class="btn btn-primary">Learn More</a>
         </div>
       </div>
     </div>
@@ -121,8 +123,8 @@ import Layout from '../layouts/Layout.astro';
         with questions.
       </p>
       <div class="cta-buttons">
-        <a href="/schedule" class="btn btn-primary">View Schedule</a>
-        <a href="/contact" class="btn btn-outline">Contact Us</a>
+        <a href={`${base}schedule`} class="btn btn-primary">View Schedule</a>
+        <a href={`${base}contact`} class="btn btn-outline">Contact Us</a>
       </div>
     </div>
   </section>

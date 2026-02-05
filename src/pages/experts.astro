@@ -7,6 +7,8 @@
 */
 
 import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Experts">
@@ -148,8 +150,8 @@ import Layout from '../layouts/Layout.astro';
       <h2>Learn From the Best</h2>
       <p>Ready to take your Bitcoin security to the next level?</p>
       <div class="cta-buttons">
-        <a href="/program" class="btn btn-primary">View Program</a>
-        <a href="/schedule" class="btn btn-outline">See Upcoming Dates</a>
+        <a href={`${base}program`} class="btn btn-primary">View Program</a>
+        <a href={`${base}schedule`} class="btn btn-outline">See Upcoming Dates</a>
       </div>
     </div>
   </section>

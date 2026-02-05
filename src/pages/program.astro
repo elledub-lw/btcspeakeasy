@@ -7,6 +7,8 @@
 */
 
 import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Program">
@@ -129,7 +131,7 @@ import Layout from '../layouts/Layout.astro';
               <li>30-day email support</li>
             </ul>
 
-            <a href="/schedule" class="btn btn-primary">View Dates</a>
+            <a href={`${base}schedule`} class="btn btn-primary">View Dates</a>
           </div>
         </div>
       </div>
@@ -264,7 +266,7 @@ import Layout from '../layouts/Layout.astro';
               <li>Small amount of Bitcoin for testing</li>
             </ul>
 
-            <a href="/schedule" class="btn btn-primary">View Dates</a>
+            <a href={`${base}schedule`} class="btn btn-primary">View Dates</a>
           </div>
         </div>
       </div>
@@ -331,7 +333,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <h2>Not Sure Which Workshop?</h2>
       <p>Contact us with a brief description of your current setup and goals. We'll recommend the right path for you.</p>
-      <a href="/contact" class="btn btn-primary">Get in Touch</a>
+      <a href={`${base}contact`} class="btn btn-primary">Get in Touch</a>
     </div>
   </section>
 </Layout>
