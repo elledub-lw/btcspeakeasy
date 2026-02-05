@@ -1,0 +1,360 @@
+---
+/*
+  index.astro - The Home Page
+
+  This is the landing page visitors see first.
+  It explains what Bitcoin Speakeasy is and why it matters.
+*/
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Secure Your Bitcoin Legacy</h1>
+      <p class="hero-subtitle">
+        Intensive 2-day workshops for high-net-worth Bitcoin holders.
+        Master multi-sig custody, risk management, and succession planning
+        with guidance from industry experts.
+      </p>
+      <div class="hero-buttons">
+        <a href="/schedule" class="btn btn-primary">View Upcoming Workshops</a>
+        <a href="/program" class="btn btn-outline">Explore the Curriculum</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition -->
+  <section class="section value-props">
+    <div class="container">
+      <h2 class="section-title">Why Bitcoin Speakeasy?</h2>
+      <div class="props-grid">
+        <div class="prop-card">
+          <h3>Expert-Led</h3>
+          <p>
+            Learn directly from industry veterans with proven track records
+            in Bitcoin security and custody solutions.
+          </p>
+        </div>
+        <div class="prop-card">
+          <h3>Hands-On</h3>
+          <p>
+            Two intensive days of practical exercises. You won't just learn
+            concepts - you'll implement real solutions.
+          </p>
+        </div>
+        <div class="prop-card">
+          <h3>Private</h3>
+          <p>
+            Small group settings ensure personalized attention and discretion.
+            Your privacy is paramount.
+          </p>
+        </div>
+        <div class="prop-card">
+          <h3>Comprehensive</h3>
+          <p>
+            From technical multi-sig setups to legal succession frameworks.
+            Everything you need to secure your Bitcoin for generations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two Workshops -->
+  <section class="section workshops-overview">
+    <div class="container">
+      <h2 class="section-title">Two Paths to Bitcoin Sovereignty</h2>
+      <div class="workshops-grid">
+        <div class="workshop-card">
+          <span class="workshop-level">Foundations</span>
+          <h3>Bitcoin Sovereignty Foundations</h3>
+          <p class="workshop-tagline">From Exchange to Self-Custody</p>
+          <p>
+            For those transitioning from exchanges to self-custody. Learn how Bitcoin
+            works, implement single-sig security, and understand privacy fundamentals.
+          </p>
+          <ul>
+            <li>Understand nodes, keys, and validation</li>
+            <li>Set up hardware wallet properly</li>
+            <li>Learn transaction privacy basics</li>
+            <li>Create your 30-day action plan</li>
+          </ul>
+          <div class="workshop-meta">
+            <span class="price">€600-900</span>
+            <span class="duration">2 days</span>
+          </div>
+          <a href="/program#foundations" class="btn btn-outline">Learn More</a>
+        </div>
+        <div class="workshop-card featured">
+          <span class="workshop-level">Advanced</span>
+          <h3>Advanced Custody & Succession</h3>
+          <p class="workshop-tagline">Design Your Bitcoin Inheritance Plan</p>
+          <p>
+            For experienced holders ready for institutional-grade security. Build
+            a production multisig wallet and documented inheritance system.
+          </p>
+          <ul>
+            <li>Design custom multisig architecture</li>
+            <li>Implement 2-of-3 or 3-of-5 setup</li>
+            <li>Create tested inheritance runbook</li>
+            <li>Geographic key distribution plan</li>
+          </ul>
+          <div class="workshop-meta">
+            <span class="price">€1,800-2,800</span>
+            <span class="duration">2 days</span>
+          </div>
+          <a href="/program#advanced" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta">
+    <div class="container">
+      <h2>Ready to Secure Your Future?</h2>
+      <p>
+        Our next workshop is coming soon. Reserve your spot or reach out
+        with questions.
+      </p>
+      <div class="cta-buttons">
+        <a href="/schedule" class="btn btn-primary">View Schedule</a>
+        <a href="/contact" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    padding: 6rem 0 4rem;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-muted);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Value Props */
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .props-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .prop-card {
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+  }
+
+  .prop-card h3 {
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .prop-card p {
+    color: var(--color-muted);
+    margin-bottom: 0;
+  }
+
+  /* What You'll Learn */
+  .what-learn {
+    background-color: var(--color-surface);
+  }
+
+  .learn-list {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    list-style: none;
+  }
+
+  .learn-list li {
+    padding: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .learn-list li:last-child {
+    border-bottom: none;
+  }
+
+  .learn-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1.35rem;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+  }
+
+  .what-learn .btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  /* Workshops Overview */
+  .workshops-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .workshop-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .workshop-card.featured {
+    border-color: var(--color-accent);
+  }
+
+  .workshop-level {
+    display: inline-block;
+    background-color: var(--color-border);
+    color: var(--color-text);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    width: fit-content;
+  }
+
+  .workshop-card.featured .workshop-level {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+  }
+
+  .workshop-card h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .workshop-tagline {
+    color: var(--color-accent);
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .workshop-card > p {
+    color: var(--color-muted);
+    margin-bottom: 1rem;
+  }
+
+  .workshop-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .workshop-card li {
+    padding: 0.375rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    font-size: 0.9375rem;
+  }
+
+  .workshop-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  .workshop-meta {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-top: 1px solid var(--color-border);
+    margin-bottom: 1rem;
+  }
+
+  .workshop-meta .price {
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .workshop-meta .duration {
+    color: var(--color-muted);
+  }
+
+  .workshop-card .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* CTA Section */
+  .cta {
+    text-align: center;
+  }
+
+  .cta h2 {
+    margin-bottom: 1rem;
+  }
+
+  .cta p {
+    color: var(--color-muted);
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 4rem 0 3rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+  }
+</style>

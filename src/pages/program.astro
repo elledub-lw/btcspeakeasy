@@ -1,0 +1,702 @@
+---
+/*
+  program.astro - The Program Page
+
+  Overview of both workshops with key details.
+  Helps visitors understand which workshop is right for them.
+*/
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Program">
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Workshop Program</h1>
+      <p class="page-intro">
+        Two distinct educational workshops designed to serve different stages
+        of the Bitcoin self-custody journey. Each is a focused, hands-on experience
+        with concrete outcomes you can implement immediately.
+      </p>
+    </div>
+  </section>
+
+  <!-- Workshop 1 -->
+  <section class="section workshop" id="foundations">
+    <div class="container">
+      <div class="workshop-header">
+        <span class="workshop-label">Workshop 1</span>
+        <h2>Bitcoin Sovereignty Foundations</h2>
+        <p class="workshop-tagline">"From Exchange to Self-Custody—Understanding Bitcoin the Right Way"</p>
+      </div>
+
+      <div class="workshop-grid">
+        <div class="workshop-main">
+          <h3>Who This Workshop Is For</h3>
+          <ul class="check-list">
+            <li>Currently holds Bitcoin on exchanges or simple mobile wallets</li>
+            <li>Wants to understand Bitcoin deeply before making custody decisions</li>
+            <li>Concerned about privacy and security but doesn't know where to start</li>
+            <li>Willing to invest time learning before moving significant funds</li>
+            <li>Ready to take responsibility for their own Bitcoin security</li>
+          </ul>
+
+          <h3>What You'll Achieve</h3>
+          <div class="outcomes">
+            <div class="outcome">
+              <span class="outcome-number">1</span>
+              <div>
+                <strong>Understand how Bitcoin actually works</strong>
+                <p>Nodes, validation, keys, and addresses</p>
+              </div>
+            </div>
+            <div class="outcome">
+              <span class="outcome-number">2</span>
+              <div>
+                <strong>Implement single-sig self-custody</strong>
+                <p>Properly set up and backed up hardware wallet</p>
+              </div>
+            </div>
+            <div class="outcome">
+              <span class="outcome-number">3</span>
+              <div>
+                <strong>Know what information you leak</strong>
+                <p>And how to reduce your digital footprint</p>
+              </div>
+            </div>
+            <div class="outcome">
+              <span class="outcome-number">4</span>
+              <div>
+                <strong>Have a 30-day action plan</strong>
+                <p>Specific steps to improve your Bitcoin privacy and security</p>
+              </div>
+            </div>
+          </div>
+
+          <h3>Curriculum Overview</h3>
+          <div class="curriculum-days">
+            <div class="curriculum-day">
+              <h4>Day 1: Understanding Bitcoin Infrastructure</h4>
+              <div class="session">
+                <span class="session-time">Morning</span>
+                <strong>How Bitcoin Actually Works</strong>
+                <p>The validation model, why run a full node, what your node does, live demo</p>
+              </div>
+              <div class="session">
+                <span class="session-time">Afternoon</span>
+                <strong>Self-Custody Fundamentals</strong>
+                <p>Private keys and seed phrases, address types, hardware wallet security model, hands-on setup</p>
+              </div>
+            </div>
+            <div class="curriculum-day">
+              <h4>Day 2: Privacy, Security, and Next Steps</h4>
+              <div class="session">
+                <span class="session-time">Morning</span>
+                <strong>Transaction Privacy Fundamentals</strong>
+                <p>How transactions reveal information, who's watching, network-level privacy leaks</p>
+              </div>
+              <div class="session">
+                <span class="session-time">Afternoon</span>
+                <strong>Operational Security & Action Planning</strong>
+                <p>Practical privacy improvements, physical security basics, personal security plan workshop</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="workshop-sidebar">
+          <div class="workshop-details-card">
+            <h4>Workshop Details</h4>
+            <dl>
+              <dt>Duration</dt>
+              <dd>2 days (16 hours total)</dd>
+              <dt>Group Size</dt>
+              <dd>8-10 participants</dd>
+              <dt>Prerequisites</dt>
+              <dd>None — designed for beginners</dd>
+              <dt>Investment</dt>
+              <dd class="price">€600-900</dd>
+            </dl>
+
+            <h4>What's Included</h4>
+            <ul>
+              <li>All course materials and documentation</li>
+              <li>Lunch both days</li>
+              <li>Dinner both evenings</li>
+              <li>Access to demo hardware wallets</li>
+              <li>Digital resource library</li>
+              <li>30-day email support</li>
+            </ul>
+
+            <a href="/schedule" class="btn btn-primary">View Dates</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workshop 2 -->
+  <section class="section workshop workshop-advanced" id="advanced">
+    <div class="container">
+      <div class="workshop-header">
+        <span class="workshop-label">Workshop 2</span>
+        <h2>Advanced Custody & Succession Planning</h2>
+        <p class="workshop-tagline">"Design, Implement, and Document Your Bitcoin Inheritance Plan"</p>
+      </div>
+
+      <div class="workshop-grid">
+        <div class="workshop-main">
+          <h3>Who This Workshop Is For</h3>
+          <ul class="check-list">
+            <li>Already self-custodies Bitcoin with hardware wallet(s)</li>
+            <li>Runs (or has run) a Bitcoin full node</li>
+            <li>Holds significant Bitcoin and wants institutional-grade security</li>
+            <li>Concerned about loss, theft, death, and succession planning</li>
+            <li>Ready to invest time implementing sophisticated custody setup</li>
+            <li>Wants geographic key distribution and resilience</li>
+          </ul>
+
+          <h3>What You'll Achieve</h3>
+          <p class="achievement-note">This is not just education — you'll build your actual production system during the workshop.</p>
+          <div class="outcomes">
+            <div class="outcome">
+              <span class="outcome-number">1</span>
+              <div>
+                <strong>Design a multisig custody architecture</strong>
+                <p>Tailored to your specific threat model</p>
+              </div>
+            </div>
+            <div class="outcome">
+              <span class="outcome-number">2</span>
+              <div>
+                <strong>Implement a functioning 2-of-3 or 3-of-5 multisig wallet</strong>
+                <p>Production-ready, not just demo</p>
+              </div>
+            </div>
+            <div class="outcome">
+              <span class="outcome-number">3</span>
+              <div>
+                <strong>Create documented, tested inheritance instructions</strong>
+                <p>That your heirs can actually follow</p>
+              </div>
+            </div>
+            <div class="outcome">
+              <span class="outcome-number">4</span>
+              <div>
+                <strong>Have a geographic distribution plan</strong>
+                <p>For keys, backups, and access protocols</p>
+              </div>
+            </div>
+          </div>
+
+          <h3>Curriculum Overview</h3>
+          <div class="curriculum-days">
+            <div class="curriculum-day">
+              <h4>Day 1: Advanced Custody Architecture</h4>
+              <div class="session">
+                <span class="session-time">Morning</span>
+                <strong>Sophisticated Multisig Design</strong>
+                <p>Security model deep dive, design considerations, key distribution strategies, personal architecture exercise</p>
+              </div>
+              <div class="session">
+                <span class="session-time">Afternoon</span>
+                <strong>Multisig Implementation</strong>
+                <p>100% hands-on: create your actual multisig wallet, execute transactions, document backup and recovery</p>
+              </div>
+            </div>
+            <div class="curriculum-day">
+              <h4>Day 2: Inheritance Planning & Resilience</h4>
+              <div class="session">
+                <span class="session-time">Morning</span>
+                <strong>Inheritance Planning</strong>
+                <p>Inheritance challenges, information architecture, legal coordination, inheritance runbook creation</p>
+              </div>
+              <div class="session">
+                <span class="session-time">Afternoon</span>
+                <strong>Testing & Finalization</strong>
+                <p>Inheritance rehearsal with partner, physical security audit, failure mode testing, final action plan</p>
+              </div>
+            </div>
+          </div>
+
+          <h3>Prerequisites (Strictly Enforced)</h3>
+          <ul class="prereq-list">
+            <li>Currently using hardware wallet for Bitcoin self-custody</li>
+            <li>Comfortable with seed phrases, derivation paths, and address verification</li>
+            <li>Have executed Bitcoin transactions with hardware wallet</li>
+            <li>Own (or willing to purchase) 2-3 hardware wallets</li>
+            <li>Have access to a Bitcoin full node</li>
+          </ul>
+          <p class="prereq-note">Pre-work: 1-hour video overview of multisig concepts (provided upon registration)</p>
+        </div>
+
+        <div class="workshop-sidebar">
+          <div class="workshop-details-card">
+            <h4>Workshop Details</h4>
+            <dl>
+              <dt>Duration</dt>
+              <dd>2 days (16 hours total)</dd>
+              <dt>Group Size</dt>
+              <dd>8-10 participants maximum</dd>
+              <dt>Prerequisites</dt>
+              <dd>Hardware wallet experience required</dd>
+              <dt>Investment</dt>
+              <dd class="price">€1,800-2,800</dd>
+            </dl>
+
+            <h4>What's Included</h4>
+            <ul>
+              <li>Personalized architecture review</li>
+              <li>All documentation templates</li>
+              <li>Lunch both days</li>
+              <li>Dinner both evenings</li>
+              <li>Access to Bitcoin full node</li>
+              <li>90-day priority email support</li>
+              <li>Alumni community access</li>
+            </ul>
+
+            <h4>You'll Need to Bring</h4>
+            <ul class="bring-list">
+              <li>Laptop with Sparrow Desktop installed</li>
+              <li>2-3 hardware wallets</li>
+              <li>Seed backup materials</li>
+              <li>Small amount of Bitcoin for testing</li>
+            </ul>
+
+            <a href="/schedule" class="btn btn-primary">View Dates</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="section comparison">
+    <div class="container">
+      <h2>Which Workshop Is Right for You?</h2>
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Foundations</th>
+              <th>Advanced</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Do you currently self-custody with a hardware wallet?</td>
+              <td>No, or just getting started</td>
+              <td>Yes, comfortable with it</td>
+            </tr>
+            <tr>
+              <td>Have you executed Bitcoin transactions with address verification?</td>
+              <td>No, or only a few times</td>
+              <td>Yes, regularly</td>
+            </tr>
+            <tr>
+              <td>Do you run (or have you run) a Bitcoin full node?</td>
+              <td>No, never tried</td>
+              <td>Yes, or understand how</td>
+            </tr>
+            <tr>
+              <td>What's your primary concern?</td>
+              <td>Learning Bitcoin and starting self-custody safely</td>
+              <td>Securing large holdings and planning inheritance</td>
+            </tr>
+            <tr>
+              <td>What outcome do you want?</td>
+              <td>Knowledge + single-sig setup + privacy improvements</td>
+              <td>Production multisig + tested inheritance plan</td>
+            </tr>
+            <tr>
+              <td>How many hardware wallets do you own?</td>
+              <td>0-1</td>
+              <td>2-3 (or willing to purchase)</td>
+            </tr>
+            <tr>
+              <td>Investment</td>
+              <td><strong>€600-900</strong></td>
+              <td><strong>€1,800-2,800</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta">
+    <div class="container">
+      <h2>Not Sure Which Workshop?</h2>
+      <p>Contact us with a brief description of your current setup and goals. We'll recommend the right path for you.</p>
+      <a href="/contact" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Page Header */
+  .page-header {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .page-intro {
+    color: var(--color-muted);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+  }
+
+  /* Workshop Sections */
+  .workshop {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .workshop-advanced {
+    background-color: var(--color-surface);
+  }
+
+  .workshop-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .workshop-label {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .workshop-header h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .workshop-tagline {
+    color: var(--color-accent);
+    font-size: 1.125rem;
+    font-style: italic;
+  }
+
+  .workshop-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .workshop-main h3 {
+    color: var(--color-accent);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .workshop-main h3:first-child {
+    margin-top: 0;
+  }
+
+  /* Check List */
+  .check-list {
+    list-style: none;
+  }
+
+  .check-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+  }
+
+  .check-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+  }
+
+  /* Outcomes */
+  .outcomes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .outcome {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .outcome-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    border-radius: 50%;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .outcome strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .outcome p {
+    color: var(--color-muted);
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+
+  .achievement-note {
+    background-color: rgba(212, 168, 82, 0.1);
+    border-left: 3px solid var(--color-accent);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  /* Curriculum */
+  .curriculum-days {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .curriculum-day {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+
+  .workshop-advanced .curriculum-day {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+  }
+
+  .curriculum-day h4 {
+    margin-bottom: 1rem;
+    color: var(--color-text);
+  }
+
+  .session {
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .session:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .session-time {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .session strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .session p {
+    color: var(--color-muted);
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+
+  /* Prerequisites */
+  .prereq-list {
+    list-style: none;
+  }
+
+  .prereq-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+  }
+
+  .prereq-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  .prereq-note {
+    color: var(--color-muted);
+    font-size: 0.9375rem;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+
+  /* Sidebar Card */
+  .workshop-details-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: sticky;
+    top: 100px;
+  }
+
+  .workshop-advanced .workshop-details-card {
+    background-color: var(--color-background);
+  }
+
+  .workshop-details-card h4 {
+    color: var(--color-accent);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .workshop-details-card h4:first-child {
+    margin-top: 0;
+  }
+
+  .workshop-details-card dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+  }
+
+  .workshop-details-card dt {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+  }
+
+  .workshop-details-card dd {
+    font-weight: 500;
+    text-align: right;
+  }
+
+  .workshop-details-card .price {
+    color: var(--color-accent);
+    font-size: 1.125rem;
+  }
+
+  .workshop-details-card ul {
+    list-style: none;
+    font-size: 0.9375rem;
+  }
+
+  .workshop-details-card li {
+    padding: 0.375rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .workshop-details-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  .bring-list li::before {
+    content: '○';
+  }
+
+  .workshop-details-card .btn {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  /* Comparison Table */
+  .comparison {
+    text-align: center;
+  }
+
+  .comparison h2 {
+    margin-bottom: 2rem;
+  }
+
+  .comparison-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9375rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .comparison-table th {
+    background-color: var(--color-surface);
+    font-weight: 600;
+  }
+
+  .comparison-table th:first-child {
+    width: 40%;
+  }
+
+  .comparison-table td:not(:first-child) {
+    color: var(--color-muted);
+  }
+
+  .comparison-table tr:last-child td {
+    color: var(--color-text);
+  }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    background-color: var(--color-surface);
+  }
+
+  .cta h2 {
+    margin-bottom: 1rem;
+  }
+
+  .cta p {
+    color: var(--color-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .workshop-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .workshop-details-card {
+      position: static;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .comparison-table {
+      font-size: 0.875rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 0.75rem 0.5rem;
+    }
+  }
+</style>

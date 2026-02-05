@@ -1,0 +1,326 @@
+---
+/*
+  contact.astro - The Contact Page
+
+  How to get in touch with Bitcoin Speakeasy.
+  Email-based contact (privacy-focused, no third-party form services).
+*/
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact">
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p class="page-intro">
+        Have questions about our workshops? Want to check if a workshop is right for you?
+        Reach out — we're happy to help.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Options -->
+  <section class="section contact-main">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Email Contact -->
+        <div class="contact-card primary">
+          <h2>Get in Touch</h2>
+          <p>
+            For workshop inquiries, registration questions, or to discuss which
+            workshop is right for you:
+          </p>
+          <a href="mailto:contact@btcspeakeasy.com" class="email-link">
+            contact@btcspeakeasy.com
+          </a>
+          <p class="response-time">We typically respond within 1-2 business days.</p>
+        </div>
+
+        <!-- What to Include -->
+        <div class="contact-card">
+          <h3>Helpful Information to Include</h3>
+          <ul>
+            <li>Which workshop you're interested in (Foundations or Advanced)</li>
+            <li>Your current Bitcoin experience level</li>
+            <li>Any specific questions or concerns</li>
+            <li>Preferred workshop location/timing (if relevant)</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Questions -->
+  <section class="section faq">
+    <div class="container">
+      <h2>Common Questions</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h4>Which workshop is right for me?</h4>
+          <p>
+            If you're new to self-custody or haven't used a hardware wallet yet,
+            start with <strong>Foundations</strong>. If you already self-custody
+            with hardware wallets and want to build a multisig setup with inheritance
+            planning, the <strong>Advanced</strong> workshop is for you.
+            <a href="/program">See the full comparison →</a>
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Can I bring a spouse or trusted person?</h4>
+          <p>
+            Yes, particularly for the Advanced workshop — having a spouse or trusted
+            contact participate can be valuable for collaborative custody planning.
+            Each person must register separately.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Are meals included?</h4>
+          <p>
+            Yes. Lunch both days and dinner both evenings are included. We accommodate
+            dietary restrictions — let us know when you register.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>What hardware wallets do you recommend?</h4>
+          <p>
+            For Foundations: any reputable hardware wallet (Coldcard, Trezor, Ledger,
+            Passport, Jade, BitBox). For Advanced: we recommend 2-3 devices from
+            different manufacturers for diversity.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Do you offer private workshops for groups?</h4>
+          <p>
+            Yes, we offer private workshops for groups of 6+ participants. This can
+            be useful for businesses, family offices, or groups of friends who want
+            to learn together. Contact us for details.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Will workshops be offered in languages other than English?</h4>
+          <p>
+            We're exploring options for workshops in other languages based on demand.
+            Let us know your preference when you reach out.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Waitlist -->
+  <section class="section waitlist">
+    <div class="container">
+      <div class="waitlist-card">
+        <h2>Join the Waitlist</h2>
+        <p>
+          Be the first to know when new workshop dates are announced.
+          Email us with "Waitlist" in the subject line and let us know
+          which workshop(s) you're interested in.
+        </p>
+        <a href="mailto:contact@btcspeakeasy.com?subject=Waitlist" class="btn btn-primary">
+          Join Waitlist
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy Note -->
+  <section class="section privacy-note">
+    <div class="container">
+      <div class="privacy-content">
+        <h3>Your Privacy Matters</h3>
+        <p>
+          We understand that Bitcoin holders value discretion. Your inquiry and
+          any information you share with us is kept confidential. We don't share
+          attendee information with third parties, and we don't use tracking or
+          analytics on this website.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Page Header */
+  .page-header {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .page-intro {
+    color: var(--color-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+  }
+
+  /* Contact Grid */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .contact-card {
+    padding: 2rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+  }
+
+  .contact-card.primary {
+    text-align: center;
+  }
+
+  .contact-card h2 {
+    margin-bottom: 1rem;
+  }
+
+  .contact-card h3 {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+  }
+
+  .contact-card p {
+    color: var(--color-muted);
+  }
+
+  .email-link {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin: 1rem 0;
+  }
+
+  .email-link:hover {
+    color: var(--color-accent-hover);
+  }
+
+  .response-time {
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .contact-card ul {
+    list-style: none;
+  }
+
+  .contact-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--color-muted);
+  }
+
+  .contact-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  /* FAQ */
+  .faq {
+    background-color: var(--color-surface);
+  }
+
+  .faq h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  .faq-item h4 {
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+  }
+
+  .faq-item p {
+    color: var(--color-muted);
+    margin: 0;
+  }
+
+  .faq-item a {
+    font-weight: 500;
+  }
+
+  /* Waitlist */
+  .waitlist-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .waitlist-card h2 {
+    margin-bottom: 1rem;
+  }
+
+  .waitlist-card p {
+    color: var(--color-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Privacy Note */
+  .privacy-note {
+    background-color: var(--color-surface);
+  }
+
+  .privacy-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-background);
+  }
+
+  .privacy-content h3 {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+  }
+
+  .privacy-content p {
+    color: var(--color-muted);
+    margin: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
